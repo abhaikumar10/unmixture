@@ -13,7 +13,7 @@
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
       });
-    }
+   }
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
