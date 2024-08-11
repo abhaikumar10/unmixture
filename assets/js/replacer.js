@@ -10,8 +10,8 @@
             document.head.innerHTML = newHeadContent;
         }
 
-        // Fetch the head content from another HTML file
-        fetch('\include\header.js') 
+        // Fetch the head content from another HTML file   fetch('\include\header.js')
+          fetch('\include\header.html')
             .then(response => response.text())
             .then(data => {
                 replacePlaceholderWithHead(data);
