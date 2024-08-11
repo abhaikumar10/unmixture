@@ -1,0 +1,36 @@
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">unmixture<span><img Src='assets/img/hammer.png' height='40px' wideth='40px' alt="&#128296;"></img></span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="#">Offers</a>
+           
+            <ul>
+              <li><a href="offers/deals.html">Top Deals</a></li>
+              <li><a href="offers/amazon.html">Amazon</a></li>
+              <li><a href="offers/flipkart.html">Flipkart</a></li>
+              <li><a href="offers/myntra.html">Myntra</a></li>
+              <li class="drop-down"><a href="#">All others</a>
+              <ul>
+                  <li><a href="offers/more/ajio.html">AJIO</a></li>
+                  <li><a href="offers/more/tataq.html">Tata Cliq</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </li>
+          <li><a href="tools.html">Tips & Tricks</a></li>
+          <li><a href="profile.html">My Space</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header>
