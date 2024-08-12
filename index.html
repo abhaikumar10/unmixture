@@ -16,8 +16,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!--replacer JS-->
-<script async src="assets/js/replacer.js"></script>
+<!--replacer JS   <script src="assets/js/replacer.js"></script>  -->
+ 
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,8 +75,50 @@ app.UseCors(builder => builder
   </div>
 
   <!-- ======= Header ======= -->
+
+<script>
+  // scripts/head-replacement.js
+
+function replaceHeadPlaceholder() {
+  console.log('log started')
+  fetch('/include/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = document.getElementById("header").innerHTML.replace('{{header}}', data);
+      })
+      .catch(error => console.error('Error fetching the head content:', error));
+}
+//console.log(data)
+// Set up the MutationObserver
+const observer = new MutationObserver((mutationsList, observer) => {
+  for (const mutation of mutationsList) {
+      if (mutation.type === 'childList' || mutation.type === 'subtree') {
+          replaceHeadPlaceholder();
+          observer.disconnect(); // Stop observing after replacing
+      }
+  }
+});
+
+// Start observing the head section for changes
+observer.observe(document.head, { childList: true, subtree: true });
+
+// Initial check if the head is already loaded
+if (document.getElementById("header").innerHTML.includes('{{header}}')) {
+  replaceHeadPlaceholder();
+  observer.disconnect(); // Stop observing if already replaced
+}
+</script>
+<header id="header" class="fixed-top">
   {{header}}
+
+  
+</header>
   <!-- End Header -->
+
+
+
+
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">

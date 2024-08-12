@@ -1,19 +1,29 @@
-<!--Head replace --> 
+// scripts/head-replacement.js
 
-        // Function to replace {{head}} with content from an external file
-        function replacePlaceholderWithHead(content) {
-            // Find the placeholder {{head}} in the document head
-            const headContent = document.head.innerHTML;
-            const newHeadContent = headContent.replace('{{head}}', content);
+function replaceHeadPlaceholder() {
+  fetch('/include/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.head.innerHTML = document.head.innerHTML.replace('{{header}}', data);
+      })
+      .catch(error => console.error('Error fetching the head content:', error));
+}
 
-            // Replace the head content with the new content
-            document.head.innerHTML = newHeadContent;
-        }
+// Set up the MutationObserver
+const observer = new MutationObserver((mutationsList, observer) => {
+  for (const mutation of mutationsList) {
+      if (mutation.type === 'childList' || mutation.type === 'subtree') {
+          replaceHeadPlaceholder();
+          observer.disconnect(); // Stop observing after replacing
+      }
+  }
+});
 
-        // Fetch the head content from another HTML file   fetch('\include\header.js')
-          fetch('\\include\\header.html')
-            .then(response => response.text())
-            .then(data => {
-                replacePlaceholderWithHead(data);
-            })
-            .catch(error => console.error('Error fetching the head content:', error));
+// Start observing the head section for changes
+observer.observe(document.head, { childList: true, subtree: true });
+
+// Initial check if the head is already loaded
+if (document.head.innerHTML.includes('{{header}}')) {
+  replaceHeadPlaceholder();
+  observer.disconnect(); // Stop observing if already replaced
+}
