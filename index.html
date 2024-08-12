@@ -9,15 +9,15 @@
   <meta content="Get Best deals Everytime." name="description">
   <meta content="Offers,Deals" name="keywords">
 
+<!--replacer JS     -->
+<script src="assets/js/replacer.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-<!--replacer JS   <script src="assets/js/replacer.js"></script>  -->
- 
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,95 +30,22 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: unmixture - v1.1.0
-  * Template URL: https://bootstrapmade.com/unmixture-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 
-  
-  <!-- Global site tag (gtag.js) - Google Analytics  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174631396-1"></script>-->
 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-174631396-1');
-</script><!--
-<script>
-app.UseCors(builder => builder
-.AllowAnyOrigin()
-.AllowAnyMethod()
-.AllowAnyHeader()
-</script>-->
 </head>
 
 <body>
 
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
-    <div class="container d-flex">
-      <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@unmixture.com">contact@unmixture.com</a>
-        <i class="icofont-hand"><a href="join.html"></i> Join Now!</a>
-      </div>
-      <div class="social-links">
-        <a target="_blank" href="https://wa.me/message/45EVMWGBAEUTK1" class="twitter"><i class="icofont-whatsapp"></i></a>
-        <a target="_blank" href="http://fb.me/unmixtureofficial" class="facebook"><i class="icofont-facebook"></i></a>
-        <a target="_blank"  href="https://www.instagram.com/gorakhpur360official" class="instagram"><i class="icofont-instagram"></i></a>
-        <a target="_blank"  href="http://youtube.com/unmixture" class="youtube"><i class="icofont-youtube"></i></a>
-        <a target="_blank" href="https://t.me/unmixture" class="linkedin"><i class="icofont-telegram"></i></i></a>
-      </div>
-    </div>
+     {{topbar}}
   </div>
 
-  <!-- ======= Header ======= -->
-
-<script>
-  // scripts/head-replacement.js
-
-function replaceHeadPlaceholder() {
-  console.log('log started')
-  fetch('/include/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = document.getElementById("header").innerHTML.replace('{{header}}', data);
-      })
-      .catch(error => console.error('Error fetching the head content:', error));
-}
-//console.log(data)
-// Set up the MutationObserver
-const observer = new MutationObserver((mutationsList, observer) => {
-  for (const mutation of mutationsList) {
-      if (mutation.type === 'childList' || mutation.type === 'subtree') {
-          replaceHeadPlaceholder();
-          observer.disconnect(); // Stop observing after replacing
-      }
-  }
-});
-
-// Start observing the head section for changes
-observer.observe(document.head, { childList: true, subtree: true });
-
-// Initial check if the head is already loaded
-if (document.getElementById("header").innerHTML.includes('{{header}}')) {
-  replaceHeadPlaceholder();
-  observer.disconnect(); // Stop observing if already replaced
-}
-</script>
+  <!-- ======= Header/Nav ======= -->
 <header id="header" class="fixed-top">
   {{header}}
-
-  
 </header>
   <!-- End Header -->
-
-
-
-
-
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -469,87 +396,7 @@ if (document.getElementById("header").innerHTML.includes('{{header}}')) {
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to get latest offers on email.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>unmixture<span> :)</span></h3>
-            <p>
-              <strong>Phone:</strong> +91 9068 347 123<br>
-              <strong>Email:</strong> contact@unmixture.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/deals.html">Offers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="profile.html">My Space</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="tools.html">Tips & Tricks</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="join.html">Join</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Top Deals</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/deals.html">Top Deals</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/amazon.html">Amazon</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/flipkart.html">Flipkart</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/myntra.html">Myntra</a></li>
-              
-              <br>
-      
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Get updated with all new offers and deals.</p>
-            <div class="social-links mt-3">
-              <a target="_blank" href="https://wa.me/message/45EVMWGBAEUTK1" class="twitter"><i class="bx bxl-whatsapp"></i></a>
-              <a target="_blank"  href="http://fb.me/unmixtureofficial" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a target="_blank"  href="https://www.instagram.com/gorakhpur360official" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a target="_blank"  href="http://youtube.com/unmixture" class="youtube"><i class="bx bxl-youtube"></i></a>
-              <a target="_blank" href="https://t.me/unmixture" class="linkedin"><i class="bx bxl-telegram"></i></a><br>
-              <script type="text/javascript" src="https://free-hit-counters.net/count/7171"></script>
-      
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span> unmixture</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/unmixture-bootstrap-business-template/ -->
-        Made with <i class="fa fa-heart">❤️</i><a href="https://unmixture.com/">unmixture</a>
-      </div>
-    </div>
+{{footer}}
   </footer><!-- End Footer -->
 
   <!-- enable preloader enable this.. <div id="preloader"></div> -->

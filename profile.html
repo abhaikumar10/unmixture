@@ -9,6 +9,9 @@
   <meta content="Get Best deals Everytime." name="description">
   <meta content="Offers,Deals" name="keywords">
 
+<!--replacer JS     -->
+<script src="assets/js/replacer.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -27,22 +30,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: unmixture - v1.1.0
-  * Template URL: https://bootstrapmade.com/unmixture-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174631396-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-174631396-1');
-</script>
 
 </head>
 
@@ -50,57 +38,15 @@
 
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
-    <div class="container d-flex">
-      <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@unmixture.com">contact@unmixture.com</a>
-        <i class="icofont-hand"><a href="join.html"></i> Join Now!</a>
-      </div>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a target="_blank"  href="http://fb.me/unmixtureofficial" class="facebook"><i class="icofont-facebook"></i></a>
-        <a target="_blank"  href="https://www.instagram.com/gorakhpur360official" class="instagram"><i class="icofont-instagram"></i></a>
-        <a target="_blank"  href="http://youtube.com/unmixture" class="youtube"><i class="icofont-youtube"></i></a>
-        <a target="_blank" href="https://t.me/unmixture" class="linkedin"><i class="icofont-telegram"></i></i></a>
-      </div>
-    </div>
+     {{topbar}}
   </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+  <!-- ======= Header/Nav ======= -->
+<header id="header" class="fixed-top">
+  {{header}}
+</header>
+  <!-- End Header -->
 
-      <h1 class="logo mr-auto"><a href="index.html">unmixture<span><img Src='assets/img/hammer.png' height='40px' wideth='40px' alt="&#128296;"></img></span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="drop-down"><a href="#">Offers</a>
-           
-            <ul>
-              <li><a href="offers/deals.html">Top Deals</a></li>
-              <li><a href="offers/amazon.html">Amazon</a></li>
-              <li><a href="offers/flipkart.html">Flipkart</a></li>
-              <li class="active"><a href="offers/myntra.html">Myntra</a></li>
-              <li class="drop-down"><a href="#">All others</a>
-              <ul>
-                  <li><a href="offers/more/ajio.html">AJIO</a></li>
-                  <li><a href="offers/more/tataq.html">Tata Qliq</a></li>
-                </ul>
-              </li>
-            </ul>
-
-          </li>
-          <li><a href="tools.html">Tips & Tricks</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
 
   <main id="main" data-aos="fade-up">
 
@@ -486,87 +432,11 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to get latest offers on email.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>unmixture<span> :)</span></h3>
-            <p>
-              <strong>Phone:</strong> +91 9068 347 123<br>
-              <strong>Email:</strong> contact@unmixture.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/deals.html">Offers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="profile.html">My Space</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="tools.html">Tips & Tricks</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="join.html">Join</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Top Deals</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/deals.html">Top Deals</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/amazon.html">Amazon</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/flipkart.html">Flipkart</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="offers/myntra.html">Myntra</a></li>
-              
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Get updated with all new offers and deals.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a target="_blank"  href="http://fb.me/unmixtureofficial" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a target="_blank"  href="https://www.instagram.com/gorakhpur360official" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a target="_blank"  href="http://youtube.com/unmixture" class="youtube"><i class="bx bxl-youtube"></i></a>
-              <a target="_blank" href="https://t.me/unmixture" class="linkedin"><i class="bx bxl-telegram"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span> unmixture</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/unmixture-bootstrap-business-template/ -->
-        Made with <i class="fa fa-heart"></i><a href="https://unmixture.com/">unmixture</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      {{footer}}
+        </footer><!-- End Footer -->
+        
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
